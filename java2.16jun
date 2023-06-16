@@ -1,0 +1,42 @@
+
+
+5. How can you create custom exceptions in Java? Provide an example of a custom exception class.
+
+
+try {
+    
+} catch (ExceptionType1 e1) {
+    
+} catch (ExceptionType2 e2) {
+    
+} finally {
+    
+}
+The try block contains the code that may throw an exception. If an exception occurs,
+it is caught by one of the catch blocks that matches the type of the exception.
+The catch block handles the exception by providing code to be executed in response to the exception. 
+The finally block contains code that always executes, regardless of whether an exception occurred.
+It is typically used to perform cleanup operations or release resources.
+
+6. What is the difference between the "throw" and "throws" keywords in Java? When would you use each? ..........all q ans sapartly in simple language
+
+*. The "throw" keyword is used to explicitly throw an exception in Java.
+It is followed by an instance of an exception class or a subclass of Throwable. When the "throw" keyword is encountered,
+it immediately interrupts the normal flow of the program and transfers control to the nearest catch block that can handle the thrown exception.
+We use the "throw" keyword when we want to manually generate and throw an exception in response to a specific condition or situation.
+
+if (balance < 0) {
+    throw new InsufficientBalanceException("Insufficient balance in the account.");
+}
+
+*. The "throws" keyword is used in the method signature to declare that a method may potentially throw one or more types of exceptions. 
+It specifies the exceptions that the method can throw but does not handle. When a method is declared with the "throws" clause,
+it means that any caller of that method must either catch the declared exceptions using a try-catch block or propagate them further using their own "throws" clause. We use the "throws" keyword when we want to indicate that a method can potentially generate certain types of exceptions, allowing the calling code to handle them appropriately.
+
+public void readFile() throws IOException {
+   
+}
+
+
+ "throw" is used to manually throw an exception, while "throws" is used to declare that a method may throw certain exceptions.
+"throw" is used within the method body, while "throws" is used in the method signature.
