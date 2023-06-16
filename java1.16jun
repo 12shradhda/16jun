@@ -1,0 +1,48 @@
+1. What is an exception in Java, and how does it differ from an error?
+In Java, an exception is an event that occurs during the execution of a program, which disrupts the normal flow of the program's instructions. 
+It represents an exceptional condition or error that can be handled within the program. 
+Exceptions can be caused by various factors such as invalid input, resource unavailability, or programming errors. 
+
+Errors, on the other hand, are also exceptional conditions that occur during the execution of a program, 
+but they typically indicate more severe problems that are difficult to recover from. Errors are often caused by issues outside 
+the control of the program, such as system failures or out-of-memory situations. Unlike exceptions,
+errors are typically not recoverable and are not meant to be caught or handled by the program.
+
+2. Explain the purpose of exception handling in Java. Why is it important?
+The purpose of exception handling in Java is to provide a mechanism for gracefully dealing with 
+exceptional situations that may arise during the execution of a program. Exception handling allows 
+programmers to write code that can detect and handle exceptions, preventing the program from abruptly terminating. 
+It helps in maintaining the normal flow of the program and provides the ability to handle errors,
+take appropriate actions, and provide informative error messages to users.
+Exception handling improves the reliability, maintainability, and robustness of Java programs.
+
+
+3. What are the two categories of exceptions in Java? Provide examples for each.
+In Java, exceptions are categorized into two broad categories: checked exceptions and unchecked exceptions.
+
+* Checked exceptions: These are exceptions that are checked at compile-time, 
+and the compiler enforces the handling of these exceptions. 
+They are typically used for conditions that can be reasonably anticipated and recovered from.
+Examples of checked exceptions include `IOException`, `SQLException`, and `ClassNotFoundException`.
+
+* Unchecked exceptions: These exceptions are not checked at compile-time, 
+and the compiler does not require explicit handling of these exceptions. 
+Unchecked exceptions usually occur due to programming errors, such as null pointer dereference or division by zero.
+Examples of unchecked exceptions include `NullPointerException`, `ArrayIndexOutOfBoundsException`, and `ArithmeticException`.
+
+4. What is the difference between checked and unchecked exceptions? Give examples of each.
+The main difference between checked and unchecked exceptions lies in how they are enforced and handled in Java.
+
+* Checked exceptions: Checked exceptions are checked at compile-time, meaning the compiler enforces 
+that these exceptions are either caught and handled or declared to be thrown in the method signature. 
+This requirement ensures that programmers explicitly handle or propagate the checked exceptions. 
+Examples of checked exceptions are `IOException`, `SQLException`, and `ClassNotFoundException`. 
+If a method throws a checked exception, the calling code must either catch 
+the exception using a try-catch block or declare that it throws the exception using the `throws` clause.
+
+* Unchecked exceptions: Unchecked exceptions, also known as runtime exceptions, are not checked at compile-time, 
+so the compiler does not enforce handling or declaration of these exceptions. 
+They are typically caused by programming errors or unexpected conditions. 
+Examples of unchecked exceptions include `NullPointerException`, `ArrayIndexOutOfBoundsException`, and `ArithmeticException`. 
+Since they are not required to be caught or declared, programmers have the option to handle or ignore these exceptions.
+
